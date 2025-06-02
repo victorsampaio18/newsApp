@@ -47,9 +47,9 @@ Se o emulador Android não funcionar, verifique se a virtualização está ativa
 # Configurando API
 Este app consome a **NewsAPI**, para configurá-la:
 
-- 1. Acesse [newsapi.org](https://newsapi.org) e crie uma conta gratuita
-- 2. Copie sua **API Key**
-- 3. Vá até o arquivo `NewsContext.tsx` e `NewsAPI.tsx` e insira sua chave na constante:
+- **Passo 1:** Acesse [newsapi.org](https://newsapi.org) e crie uma conta gratuita
+- **Passo 2:** Copie sua **API Key**
+- **Passo 3:** Vá até o arquivo `NewsContext.tsx` e `NewsAPI.tsx` e insira sua chave na constante:
 ```ts
 const apiKey = 'SUA_CHAVE_AQUI';
 ```
@@ -70,7 +70,7 @@ cd AppNoticias
 - **Passo 2:** Instale as dependências
 npm install
 
-- **Passo 2.1:** Se estiver usando Mac, instale o pods no iOS
+- Passo 2.1: Se estiver usando Mac, instale o pods no iOS
 npx pod-install
 
 - **Passo 3:** Execute o app
