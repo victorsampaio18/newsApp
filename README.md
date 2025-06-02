@@ -76,6 +76,9 @@ npx pod-install
 **Android:** npx react-native run-android
 **iOS:** npx react-native run-ios
 
+# Documentação Completa
+Documentação completa: https://drive.google.com/file/d/19bvQg_IYGMkPyLSnxCyVpmwk6-pixY8A/view?usp=sharing
+
 # Autor
 Desenvolvido por **Victor Sampaio de Almeida**
 
