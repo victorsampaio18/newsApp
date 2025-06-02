@@ -1,97 +1,84 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<h1 align="center">NewsApp</h1>
 
-# Getting Started
+![Badge Finalizado](http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+O NewsApp é um aplicativo mobile desenvolvido com **React Native CLI**, projetado para fornecer ao usuário uma experiência prática e intuitiva na leitura de notícias em tempo real. Utilizando a **NewsAPI** como fonte de dados, o aplicativo permite a exibição de manchetes atualizadas, detalhamento completo de cada notícia, busca por título, filtragem por categorias, gerenciamento de favoritos e suporte ao modo off-line, tudo isso em uma interface limpa e responsiva.
 
-## Step 1: Start Metro
+# Funcionalidades
+- Tela de **Splash** com animação de carregamento
+- Tela de **Home** com scroll infinito apresentando as notícias
+- **Navbar** presente na tela Home com animação ao rolar a lista
+- Notícias exibidas em **cards** com categoria, imagem, título, fonte e data
+- **Busca** de notícias por título
+- Filtro por **categorias**
+- Tela de **detalhes** com informações completas da notícia
+- **Favoritar notícias** (armazenamento com `AsyncStorage`)
+- Visualização de **notícias favoritadas** em tela separada
+- Suporte a **modo offline** (com alerta usando `NetInfo`)
+- Design responsivo
+- Função de **compartilhamento** nativa
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+# Tecnologias Utilizadas
+- **React Native CLI**
+- **React Navigation**
+- **TypeScript**
+- **Axios**
+- **NewsAPI**
+- **AsyncStorage**
+- **NetInfo**
+- **react-native-vector-icons**
+- **react-native-picker-select**
+- **react-native-gesture-handler**
+- **@react-navigation/native / stack / native-stack**
+- **react-native-screens**
+- **react-native-safe-area-context**
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+# Requisitos Necessários
+- Node.js versão 16.x ou mais recente
+- React Native CLI
+- Instale Android Studio ou Xcode (emulador ou dispositivo físico)
+- Criar uma conta na [NewsAPI.org](https://newsapi.org)
 
-```sh
-# Using npm
-npm start
+# Observação para Emulador
+Se o emulador Android não funcionar, verifique se a virtualização está ativada na BIOS:
+- Intel: **Intel VT-x**
+- AMD: **AMD-V**
 
-# OR using Yarn
-yarn start
+# Configurando API
+Este app consome a **NewsAPI**, para configurá-la:
+
+- 1. Acesse [newsapi.org](https://newsapi.org) e crie uma conta gratuita
+- 2. Copie sua **API Key**
+- 3. Vá até o arquivo `NewsContext.tsx` e `NewsAPI.tsx` e insira sua chave na constante:
+```ts
+const apiKey = 'SUA_CHAVE_AQUI';
 ```
 
-## Step 2: Build and run your app
+# Estrutura do Projeto (src)
+- assets/ (imagens)
+- components/ (Componentes reutilizáveis: Navbar, NewsItem)
+- contexts/ (Contextos: NewsContext, NetworkContext)
+- screens/ (Telas: Home, Splash, Favorites, Detail)
+- types/ (Tipagens: navigation, Article)
+- AppNavigator.tsx (Navegação principal)
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+# Instalação
+- **Passo 1:** Clone o repositório
+git clone https://github.com/victorsampaio18/newsApp.git
+cd AppNoticias
 
-### Android
+- **Passo 2:** Instale as dependências
+npm install
 
-```sh
-# Using npm
-npm run android
+- **Passo 2.1:** Se estiver usando Mac, instale o pods no iOS
+npx pod-install
 
-# OR using Yarn
-yarn android
-```
+- **Passo 3:** Execute o app
+**Android:** npx react-native run-android
+**iOS:** npx react-native run-ios
 
-### iOS
+# Autor
+Desenvolvido por **Victor Sampaio de Almeida**
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+# Licença
+Este projeto está licenciado sob a **MIT License**
