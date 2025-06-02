@@ -65,9 +65,8 @@ const apiKey = 'SUA_CHAVE_AQUI';
 # Instalação
 - **Passo 1:** Clone o repositório
 git clone https://github.com/victorsampaio18/newsApp.git
-cd AppNoticias
 
-- **Passo 2:** Instale as dependências
+- **Passo 2:** Instale as dependências na pasta principal
 npm install
 
 - Passo 2.1: Se estiver usando Mac, instale o pods no iOS
